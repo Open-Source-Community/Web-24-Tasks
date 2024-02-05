@@ -19,7 +19,7 @@
   - ## How to Submit the tasks?
     - after working on your changes push it to the copied repo and make a pull request (by ckicking the "Pull requests" button) </br>
     ![pull requests 1](./docs/imgs/pull%20request%20.png)
-    - then click on "New pull request" button.
+    - then click on "New pull request" button. </br>
     ![pull request 2](./docs/imgs/pull%20request%202.png)
     - then click on the "Create pull request" button.
     ![pull request 3](./docs/imgs/pull%20requst%203.png)
