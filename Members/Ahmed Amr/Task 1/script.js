@@ -36,7 +36,7 @@ car3.display();
 
 /*----------------------- JSON Part -----------------------*/
 
-let person = '{"fName":"Ahmed" , "lName":"Elhossieny"}';
+let person = '{"name":"Ahmed Elhossieny", "age":"26", "city":"Cairo"}';
 const personObj = JSON.parse(person);
 
 /*----------------------- DOM Part -----------------------*/
@@ -67,18 +67,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   postUsers = document.querySelectorAll(".post__info h2");
   postUsers.forEach((postUser) => {
-    postUser.textContent = personObj.fName + " " + personObj.lName;
-  }) 
+    postUser.textContent = `${personObj.name}, ${personObj.age}, ${personObj.city}`;
+  });
 });
 
 function changePosts() {
+  postImageBool = false;
   const postInput = document.querySelector("form input");
   const postText = postInput.value;
+  for (i = 0; i < postText.length; i++) {
+    if (!isNaN(postText[i])) {
+      postImageBool = true;
+    }
+  }
   if (postInput) {
     postInput.value = "";
-    let postParagraphs = document.querySelectorAll(".post__body p");
-    postParagraphs.forEach((postParagraph) => {
-      postParagraph.textContent = postText;
+    let posts = document.querySelectorAll(".post__body");
+    posts.forEach((post) => {
+      post.querySelector("p").textContent = postText;
+      if (postImageBool) {
+        if (!post.querySelector("img")) {
+          imgChild = document.createElement("img");
+          imgChild.setAttribute(
+            "src",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+          );
+          imgChild.setAttribute("width", "400");
+          post.appendChild(imgChild);
+        }
+      } else if (post.querySelector("img")) {
+        post.querySelector("img").remove();
+      }
     });
   }
   return false;
