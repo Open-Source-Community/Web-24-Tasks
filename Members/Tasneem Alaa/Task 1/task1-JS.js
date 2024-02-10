@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementsByClassName('inputOption');
     const len = button.length;
-    
-    // console.log(button);
-    
-    
+        
     for (let i = 0; i < len; i++) {
         const oneButton = button[i];
         const buttonText = oneButton.childNodes[3];
@@ -19,23 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
             buttonIcon.style.color= (currentColorIcon !== 'blue') ? 'blue' : 'gray';
         }
         oneButton.onclick = likeColor;
-        // console.log(buttonText.innerHTML);
         }
+
         //2nd Task : click on comment => open a prompt pop-up
         if (buttonText.innerHTML == 'Comment'){
         function pop_up() {
             window.prompt("Please,\nEnter your comment here", "No Comment"); 
         }
         oneButton.onclick = pop_up;
-        // console.log(buttonText.innerHTML);
     }
+
     //3rd Task : click on share => open a new window
     if (buttonText.innerHTML == 'Share'){
         function shareWindow() {
             window.open("", "", "width=1920,height=800");
         }
         oneButton.onclick = shareWindow;
-        // console.log(buttonText.innerHTML);
         }
     }
 
@@ -55,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function writeTheMessage() {
             const inputValue = inputElement.value;
 
-            // console.log(inputValue);
-
             //task 5 : when the input contains number => add an image to the post
             const containsNumber = /\d/.test(inputElement.value);
 
@@ -64,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
             previousImages.forEach(img => img.remove());
     
             if (containsNumber) {
-                // console.log('Input contains a number');
 
                 const imageElement = document.createElement('img');
                 imageElement.src = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEif6ffu_tznckP4f2g778-3m5ClwbqxX5ttgY5Rwtsx0LhXnHfM4wkg-7imzlSrcZbb0-JXEkyqpYqENSDn6h0X2tfZmDPlaaB1w4wpf-b8_NNvxiy6xtOyo_VT0BSRwHDbcqaPTcc3qCS7wzkTspBd4j3VhHcTJcqfVEX_Qapiw4zSqSSXAACiqv7w/s2250/%D8%AC%D9%88%D8%AC%D9%84.png';
