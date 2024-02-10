@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(15, 15, 15);
+    color: rgb(150,150,150);
+    transition: 0.1s;
+  }
+  .header , .sidebar__top , .sidebar__stats , .sidebar__bottom , .feed__inputContainer , .post , .widgets{
+    background-color: black;
+  }
+  .headerOption:hover {
+    color: white;
+  }
+    #btn i {
+    color: black;
+  }
+  .header__search {
+    background-color: rgb(30,30,30);
+  }
+  .sidebar__recentItem:hover , .widgets__article:hover{
+    background-color: rgb(30, 30, 30);
+    color: white;
+  }
+  .inputOption:hover {
+    background-color: rgb(30, 30, 30);
+  }
+ #text {
+    background-color: black;
+    color: white;
+  }

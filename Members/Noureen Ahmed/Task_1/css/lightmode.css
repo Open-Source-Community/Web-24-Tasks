@@ -1,0 +1,20 @@
+  body {
+    background-color: rgb(240, 240, 240);
+    transition: 0.1s;
+  }
+  .header , .sidebar__top , .sidebar__stats , .sidebar__bottom , .feed__inputContainer , .post , .widgets{
+    background-color: white;
+  }
+  .headerOption:hover , #btn , #btn i {
+    color: black;
+  }
+  .header__search {
+    background-color: rgb(238, 243, 248);
+  }
+  .sidebar__recentItem:hover, .widgets__article:hover{
+    background-color: whitesmoke;
+    color: black;
+  }
+  .inputOption:hover {
+    background-color: whitesmoke;
+  }
